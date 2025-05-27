@@ -1,0 +1,23 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Honk&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+#standart {
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+    border: 5px solid black;
+
+    /* ელემენტის სიგანე რეალური უნდა იყოს 200 */
+}
+
+#alternative {
+    /* border-box - შიგთავსის ზომას აღარ დაემატება პადინგი და ბორდერი, არამედ გამოაკლდება */
+
+    /* content-box - ქარხნული მნიშნელობა, მისი გამოყენების შემთხვევაში შიგთავისს ზომას დაემატება პადინგი და ბორდერი */
+    box-sizing: border-box;
+
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+    border: 5px solid black;
+}

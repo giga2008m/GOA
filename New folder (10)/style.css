@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: Roboto;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    background-color: #E8F9FF;
+}
+
+section {
+    width: 250px;
+    height: 250px;
+    border: 5px solid white;
+    background-color: royalblue;
+}
+
+main {
+    border: 5px solid brown;
+    width: 800px;
+    height: 800px;
+
+}
+
+/*align-items არის კუთვინელება რომლითაც ვაკონტროლებ გადამკვეთი
+ღერძის პოზიციას,justify-content-ის გამოყენებით ვაკონტროლებთ მთავარ
+ღერძზე განლაგებული ელემენტების პოზიციას,flex-direction-ით ვაკონტროლებთ
+ელემენტების განლაგებას*/
+
