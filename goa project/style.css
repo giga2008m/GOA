@@ -1,0 +1,35 @@
+
+
+body{
+    display: flex;
+    background-color: rgb(236, 224, 225);
+    transform: translate(500px,200px);
+    font-size: medium;
+    border-radius: 10;
+    padding: 15;
+    margin: 15;
+}
+
+
+
+button{
+    padding: 10px 0;
+    background-color: hsl(158, 36%, 37%);
+    border: none;
+    border-radius: 7px;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+main{
+    transform: translate(10px,-15px);
+}
+
+
+p{
+    color:gray;
+}
