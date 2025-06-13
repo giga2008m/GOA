@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+*{
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+    font-family: "Karla", sans-serif;
+}
+/* აქ ყველაფერი გადადის  ცენტრში და უკანა ფონად hsl(204, 43%, 93%) ეს ფერია მინიჭებული    */
+body{
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(204, 43%, 93%);
+}
+/* მთავარ დივში რაც გადარჭარბებული რაღაცაები არის დაფარული overflow: hidden;-ის დახმარებით */
+.mainDiv{
+    border-radius: 5px;
+    overflow: hidden;
+}
+/* პირველ დივში უკანა ფონის ფერად თეთრია არჩეული სიმაღლე 20 პიქსელია პადინგი 30 პიქსელი */
+.firstDiv{
+    background-color: white;
+    height:200px;
+    padding: 30px;
+}
+/*აქ მარჯინის "ძირი" არის 25 პიქსელი ამისთვის ვიყენებთ ამ კოდს  margin-bottom: 25px;  */
+.paragraph1{
+    color:#26a8a6;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+/* აქ განსაკუთრებული არაფერი ხდება მხოლოდ ფონტის სისქე არის შეცვლილი */
+.paragraph2{
+    color:#BEDF31;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.paragraph3{
+    color:hsl(218, 22%, 67%);
+}
+/* აქ ორი დივია გაერთიანებული დისფლეი ფლექსის საშუალებით ელემენტები ერთმანეთის გვერდით აის დაწყობილი  */
+.twoDivsTogether{
+    display: flex;
+    flex-direction: row;
+}
+
+.first{
+    background-color: #2BB4B1;
+    /* display: flex;
+    flex-direction: column; */
+    padding: 30px;
+    width:50%;
+}
+
+.paragraph4{
+    color:white;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+h2{
+    color:white;
+    margin-bottom: 10px;
+}
+
+h2 span{
+    color:hsl(179, 61%, 52%);
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+.paragraph5{
+    color:white;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+/* აქ ხდება ღილაკის გასტილვა */
+button{
+    background-color: #BEDF31;
+    border:none;
+    width:100%;
+    padding: 13px;
+    border-radius: 5px;
+    color:white;
+    font-weight: 700;
+}
+
+.second{
+    background-color: #49BEBD;
+    padding: 30px;
+    width:50%;
+}
+
+.paragraph6{
+    color:hsl(204, 43%, 93%);
+    font-size: 14px;
+    margin-bottom: 3px;
+}

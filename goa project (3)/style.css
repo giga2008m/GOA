@@ -1,0 +1,44 @@
+body{
+    background-color:hsl(222, 43%, 84%);
+    background-image:url(images/pattern-background-mobile.svg) ;
+    border-radius: 15px;
+    
+}
+
+.maindiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+ 
+.div2{
+    background-color: white;
+    display: flex;
+
+    flex-direction: column;
+    font-size: 28px;
+}
+
+h1{
+    color:hsl(223, 47%, 23%);
+}
+
+p{    
+    color: rgb(154, 172, 198);
+}
+
+b{
+    color:hsl(223, 47%, 23%) ;
+}
+
+.btn1{
+    color:rgb(154, 172, 198);
+}
+
+.btn2{
+    background-color: rgb(179, 150, 231);
+    color: white;
+}
