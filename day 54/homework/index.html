@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Guess the Number</title>
+</head>
+<body>
+
+<button onclick="guessNumber()">Guess the secret number</button>
+
+<script>
+  const secret = 7;
+
+  function guessNumber() {
+    const num = +prompt("Enter a number:");
+    if (num > secret) alert("Your number is too high, try again.");
+    else if (num < secret) alert("Your number is too low, try again.");
+    else alert("You have guessed the secret number!");
+  }
+</script>
+
+</body>
+</html>
