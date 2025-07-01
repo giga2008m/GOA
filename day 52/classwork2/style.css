@@ -1,0 +1,20 @@
+
+
+
+div{
+
+    @keyframes animationName {
+  0%   { /* საწყისი სტილი */ }
+  50%  { /* შუა სტილი */ }
+  100% { /* საბოლოო სტილი */ }
+}
+     
+  width: 100px;
+  height: 100px;
+  background: red;
+
+  animation-name: move; /* ანიმაციის სახელი */
+  animation-duration: 3s; /* რამდენ ხანს გრძელდება ანიმაცია */
+  animation-delay: 2s; /* ანიმაცია იწყება 2 წამის შემდეგ */
+
+}

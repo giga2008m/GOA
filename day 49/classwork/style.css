@@ -1,0 +1,29 @@
+section {
+  width: 150px;
+  height: 100px;
+  margin: 20px;
+  color: white;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+
+.n1 {
+  background-color: red;
+  transform: rotate(20deg);
+}
+
+
+.n2 {
+  background-color: royalblue;
+  transform: scale(1.2);
+}
+
+
+.n3 {
+  background-color: seagreen;
+  transform: translateX(50px);
+}
