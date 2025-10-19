@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Paragraph Style Changer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  
+  <p id="myParagraph">Hello</p>
+
+ 
+  <button id="bgColorBtn">Change Background Color</button>
+  <button id="textColorBtn">Change Text Color</button>
+  <button id="fontSizeBtn">Change Font Size</button>
+
+  
+  <script>
+   
+    const paragraph = document.getElementById("myParagraph");
+    const bgColorBtn = document.getElementById("bgColorBtn");
+    const textColorBtn = document.getElementById("textColorBtn");
+    const fontSizeBtn = document.getElementById("fontSizeBtn");
+
+    // ღილაკზე დაკლიკებისას იცვლება უკანა ფერი
+    bgColorBtn.addEventListener("click", function() {
+      paragraph.style.backgroundColor = "lightblue";
+    });
+
+    // ღილაკზე დაკლიკებისას იცვლება ტექსტის ფერი
+    textColorBtn.addEventListener("click", function() {
+      paragraph.style.color = "darkred";
+    });
+
+    // ღილაკზე დაკლიკებისას იცვლება ტექსტის ზომა
+    fontSizeBtn.addEventListener("click", function() {
+      paragraph.style.fontSize = "24px";
+    });
+  </script>
+
+</body>
+</html>

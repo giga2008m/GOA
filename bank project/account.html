@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Bank - Account</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1> My Account</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="account.html">Account</a>
+      <a href="transfer.html">Transfer</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="account-info">
+      <h2>მიმდინარე ბალანსი:</h2>
+      <h3 id="balance">0 ₾</h3>
+    </section>
+
+    <section>
+      <h3> ტრანზაქციების ისტორია</h3>
+      <ul id="transactions-list"></ul>
+    </section>
+
+    <div class="page-buttons">
+      <button onclick="window.location.href='index.html'"> Home</button>
+      <button onclick="window.location.href='account.html'"> Account</button>
+      <button onclick="window.location.href='transfer.html'"> Transfer</button>
+      <button onclick="window.location.href='about.html'"> About Us</button>
+      <button onclick="window.location.href='contact.html'"> Contact Us</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+<meta charset="UTF-8">
+<title>Add Car Project</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f2f2f2;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        width: 600px;
+        margin: 40px auto;
+        background: #fff;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    h2 {
+        text-align: center;
+        color: #333;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+    input {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 14px;
+    }
+    button {
+        background: #4CAF50;
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 8px;
+        font-size: 14px;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+    button:hover {
+        background: #45a049;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    th, td {
+        border: 1px solid #ddd;
+        text-align: center;
+        padding: 8px;
+    }
+    th {
+        background-color: #4CAF50;
+        color: white;
+    }
+    .delete-btn {
+        background: #ff4d4d;
+        color: white;
+        border: none;
+        padding: 5px 8px;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+    .delete-btn:hover {
+        background: #e60000;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Add Car</h2>
+    <form id="carForm">
+        <input type="text" id="make" placeholder="Make" required>
+        <input type="text" id="model" placeholder="Model" required>
+        <input type="number" id="year" placeholder="Year" required>
+        <button type="submit">Add Car</button>
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Make</th>
+                <th>Model</th>
+                <th>Year</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="carTableBody"></tbody>
+    </table>
+</div>
+
+<script>
+class Car {
+    constructor(id, make, model, year) {
+        this.id = id;
+        this.make = make;
+        this.model = model;
+        this.year = year;
+    }
+}
+
+class CarManager {
+    constructor() {
+        this.cars = JSON.parse(localStorage.getItem('cars')) || [];
+    }
+
+    addCar(make, model, year) {
+        const id = Date.now(); // უნიკალური ID
+        const newCar = new Car(id, make, model, year);
+        this.cars.push(newCar);
+        this.saveToStorage();
+    }
+
+    deleteCar(id) {
+        this.cars = this.cars.filter(car => car.id !== id);
+        this.saveToStorage();
+    }
+
+    saveToStorage() {
+        localStorage.setItem('cars', JSON.stringify(this.cars));
+    }
+
+    getCars() {
+        return this.cars;
+    }
+}
+
+// ობიექტის შექმნა
+const carManager = new CarManager();
+
+// UI განახლების ფუნქცია
+function renderTable() {
+    const tableBody = document.getElementById('carTableBody');
+    tableBody.innerHTML = '';
+    carManager.getCars().forEach(car => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td>${car.id}</td>
+            <td>${car.make}</td>
+            <td>${car.model}</td>
+            <td>${car.year}</td>
+            <td><button class="delete-btn" data-id="${car.id}">Delete</button></td>
+        `;
+        tableBody.appendChild(row);
+    });
+}
+
+// ფორმის submit event
+document.getElementById('carForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const make = document.getElementById('make').value.trim();
+    const model = document.getElementById('model').value.trim();
+    const year = document.getElementById('year').value.trim();
+
+    carManager.addCar(make, model, year);
+    renderTable();
+
+    // ფორმის გასუფთავება
+    e.target.reset();
+});
+
+// Delete ღილაკზე click event
+document.getElementById('carTableBody').addEventListener('click', function(e) {
+    if (e.target.classList.contains('delete-btn')) {
+        const id = Number(e.target.getAttribute('data-id'));
+        carManager.deleteCar(id);
+        renderTable();
+    }
+});
+
+// პირველ ჩატვირთვაზე ცხრილის გამოჩენა
+renderTable();
+</script>
+
+</body>
+</html>
+

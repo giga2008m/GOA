@@ -1,0 +1,52 @@
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+background: #2f3346;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+}
+.card {
+background: white;
+border-radius: 12px;
+padding: 30px;
+max-width: 400px;
+box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+text-align: center;
+}
+h1 {
+margin-top: 0;
+}
+input {
+width: 100%;
+padding: 10px;
+margin: 10px 0;
+border: 1px solid #ccc;
+border-radius: 6px;
+}
+button {
+width: 100%;
+padding: 12px;
+background: linear-gradient(135deg, #ff6c4d, #ff2c7d);
+color: white;
+border: none;
+border-radius: 6px;
+cursor: pointer;
+}
+button:hover {
+opacity: 0.9;
+}
+/* Success Message */
+.success {
+display: none;
+background: white;
+border-radius: 12px;
+padding: 30px;
+max-width: 400px;
+text-align: center;
+box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+.success h2 {
+margin: 15px 0;
+}

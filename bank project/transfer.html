@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Bank - Transfer & Operations</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1> ოპერაციები</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="account.html">Account</a>
+      <a href="transfer.html">Transfer</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="balance-section">
+      <h2>მიმდინარე ბალანსი:</h2>
+      <h2 id="balance">0 ₾</h2>
+    </section>
+
+    <section class="operation">
+      <h3> თანხის შეტანა</h3>
+      <input type="number" id="depositAmount" placeholder="შეიყვანე თანხა" />
+      <button onclick="deposit(parseFloat(document.getElementById('depositAmount').value))">შეტანა</button>
+    </section>
+
+    <section class="operation">
+      <h3>თანხის გატანა</h3>
+      <input type="number" id="withdrawAmount" placeholder="შეიყვანე თანხა" />
+      <button onclick="withdraw(parseFloat(document.getElementById('withdrawAmount').value))">გატანა</button>
+    </section>
+
+    <section class="operation">
+      <h3> გადარიცხვა სხვა მომხმარებელთან</h3>
+      <input type="text" id="receiverName" placeholder="მიმღების სახელი" />
+      <input type="number" id="transferAmount" placeholder="თანხა (₾)" />
+      <button onclick="transfer(parseFloat(document.getElementById('transferAmount').value), document.getElementById('receiverName').value)">გადარიცხვა</button>
+    </section>
+
+    <section>
+      <h3>ტრანზაქციების ისტორია</h3>
+      <ul id="transactions-list"></ul>
+    </section>
+
+    <div class="page-buttons">
+      <button onclick="window.location.href='index.html'">Home</button>
+      <button onclick="window.location.href='account.html'">Account</button>
+      <button onclick="window.location.href='transfer.html'">Transfer</button>
+      <button onclick="window.location.href='about.html'">About Us</button>
+      <button onclick="window.location.href='contact.html'">Contact Us</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
